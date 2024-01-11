@@ -4,6 +4,9 @@
 
 > NOTE: this concludes to rather a lazy solution. there might be a better way to do it but it is what it is.
 >> Also most of my knwoledge about wasm was gained 2 days prior writing this so i am in no means expert
+
+<p> <i>You can check out the end-result <a href="https://es-lo-que-es.github.io/odin-emcc-linking-build/">here</a> </i></p>
+
 <hr/>
 
 <h2> Introduction </h2>
@@ -66,7 +69,7 @@ main :: proc()
 <p> which basically means that our wasm module was looking for its imports and havent found them.</p>
 <p> good thing we can provide theese imports during wasm module initialisation. lets look which functions do we need to provide </p>
 
-> there are multiple ways to check wasm module import section. on of which to cast it to "human-readable"(not really) .wat format with tools like wasm2wat
+> there are multiple ways to check wasm module import section. one of which to cast it to "human-readable"(not really) .wat format with tools like wasm2wat
 
 <p> inspecting .wat file made from our module we can see the following imports: </p>
 
@@ -312,7 +315,7 @@ int copy_buffer_size() { return COPY_BUFFER_SIZE; }
 
 <p> we are almost done! since odin.runWasm initialises and runs wasm module in one go we wont be able to access module's memory. so lets create our own function to init module and return exports (reusing odin.runWasm code) </p>
 
-```
+```Javascript
 async function getOdinExports(wasmPath, consoleElement, extraForeignImports) {
 {
    let wasmMemoryInterface = new WasmMemoryInterface();
@@ -388,9 +391,14 @@ async function getOdinExports(wasmPath, consoleElement, extraForeignImports) {
    Module.onRuntimeInitialized = () => { run_app(); }
 ```
 
-<p> and TA-DAAA(again) everything seems to be working as expected! </p>
+<p> and <b>TA-DAAA(again)</b> everything seems to be working as expected! </p>
 
 
 https://github.com/es-lo-que-es/odin-emcc-linking/assets/143192493/c03b94d2-f99f-4cb4-ad3d-5c8a4c84b442
 
 
+<p> we even got our window title set by <b>sdl2.CreateWindow</b> :) </p>
+
+```Odin
+   window := sdl2.CreateWindow("Cool Snapy Title", 0, 0, width, height, { .SHOWN });
+```
