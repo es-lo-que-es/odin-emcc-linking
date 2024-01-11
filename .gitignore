@@ -1,0 +1,7 @@
+main
+
+*.wasm
+sdl_exports.js
+runtime.js
+
+*/build/*
