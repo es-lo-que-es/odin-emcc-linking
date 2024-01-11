@@ -171,7 +171,9 @@ index.html:21 err:  RuntimeError: unreachable
 </script>
 ```
 <p> and <b>TA-DAAA!</b> we can see our beautiful red rectangle on the screen</p>
-<!-- paste image here -->
+
+![photo_2024-01-10_15-41-38](https://github.com/es-lo-que-es/odin-emcc-linking/assets/143192493/19853153-f56d-4033-9760-298e7b572040)
+
 
 <hr/>
 
@@ -387,4 +389,8 @@ async function getOdinExports(wasmPath, consoleElement, extraForeignImports) {
 ```
 
 <p> and TA-DAAA(again) everything seems to be working as expected! </p>
-<!-- paste a video here -->
+
+
+https://github.com/es-lo-que-es/odin-emcc-linking/assets/143192493/c03b94d2-f99f-4cb4-ad3d-5c8a4c84b442
+
+
