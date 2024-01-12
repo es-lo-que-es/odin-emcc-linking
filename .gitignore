@@ -4,4 +4,4 @@ main
 sdl_exports.js
 runtime.js
 
-*/build/*
+build/

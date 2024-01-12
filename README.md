@@ -394,7 +394,9 @@ async function getOdinExports(wasmPath, consoleElement, extraForeignImports) {
 <p> and <b>TA-DAAA(again)</b> everything seems to be working as expected! </p>
 
 
-https://github.com/es-lo-que-es/odin-emcc-linking/assets/143192493/c03b94d2-f99f-4cb4-ad3d-5c8a4c84b442
+
+https://github.com/es-lo-que-es/odin-emcc-linking/assets/143192493/89ade4d8-7c85-4324-bd4a-fe5d4c9e1658
+
 
 
 <p> we even got our window title set by <b>sdl2.CreateWindow</b> :) </p>

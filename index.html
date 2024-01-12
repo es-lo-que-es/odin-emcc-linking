@@ -120,7 +120,7 @@
       exports._start();
       
       function animate() {
-         if ( exports._iterate() ) requestAnimationFrame(animate);
+         if ( exports._iterate(exports.default_context_ptr()) ) requestAnimationFrame(animate);
          else exports._end();
       }
          
