@@ -289,6 +289,8 @@ int copy_buffer_size() { return COPY_BUFFER_SIZE; }
       // function to copy parameter into our copy buffer
       copy(ptr, sizeof, out=false) 
       {
+         // do not copy from NULL pointer
+         if ( ptr === 0 ) return 0;
          // loop ring buffer
          if ( this.offset + sizeof > this.size ) this.offset = 0;
 
